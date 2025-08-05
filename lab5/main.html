@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>student info</title>
+  </head>
+  <body>
+    <h1>student info</h1>
+    <button id="loadBtn">load student</button>
+    <div id="studentData"></div>
+
+    <script>
+function fetchStudentData(studentId) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(`Student #${studentId}: John Doe (Age: 20)`);
+        }, 1000);
+      });
+    }
+
+    async function loadStudent(studentId) {
+      try {
+        const data = await fetchStudentData(studentId);
+        document.getElementById("studentData").textContent = data;
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
+
+    document.getElementById("loadBtn").addEventListener("click", () => {
+      loadStudent(1);
+    });
+    </script>
+  </body>
+</html>

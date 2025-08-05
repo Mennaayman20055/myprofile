@@ -1,0 +1,62 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>userform</title>
+  </head>
+  <body>
+<form id="profileform">
+  <input type="text" id="name" placeholder="Enter Name"><br><br>
+  <input type="email" id="email" placeholder="Enter Email"><br><br>
+  <textarea id="bio" placeholder="Enter Bio"></textarea><br><br>
+  <button type="submit">Save Profile</button>
+</form>
+
+<div id="profileDisplay"></div>
+
+<script>
+  document.getElementById('profileform').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let bio = document.getElementById('bio').value.trim();
+
+    // Basic validation
+    if(name === '' || email === '' || bio === '') {
+        alert('Please fill all fields');
+        return;
+    }
+
+    // Save to localStorage
+    let profile = {
+        name: name,
+        email: email,
+        bio: bio
+    };
+    localStorage.setItem('profile', JSON.stringify(profile));
+
+    displayProfile();
+});
+
+function displayProfile() {
+    let profileData = localStorage.getItem('profile');
+    if(profileData) {
+        let profile = JSON.parse(profileData);
+        document.getElementById('profileDisplay').innerHTML = `
+            <h3>Saved Profile:</h3>
+            <p><strong>Name:</strong> ${profile.name}</p>
+            <p><strong>Email:</strong> ${profile.email}</p>
+            <p><strong>Bio:</strong> ${profile.bio}</p>
+        `;
+    }
+}
+
+// Load profile on page load
+//window.onload = displayProfile;
+
+</script>
+  </body>

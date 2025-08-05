@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Profile Card</title>
+  <style>
+    .card {
+      width: 300px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      background-color: #f9f9f9;
+      text-align: center;
+      font-family: Arial;
+      margin: 50px auto;
+    }
+
+    .fun-fact {
+      margin-top: 15px;
+      color: #555;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .color-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .toggle-fact-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    /* 🌙 الوضع الداكن */
+    .dark-mode {
+      background-color: #333;
+      color: white;
+    }
+
+    .dark-mode .fun-fact {
+      color: #ddd;
+    }
+
+    .dark-mode button {
+      background-color: #555;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="profileCard">
+    <h2>Menna Ayman</h2>
+    <p>I am a computer science student passionate about web development.</p>
+
+    <button class="color-btn" onclick="changeColor()">Change Color</button>
+    <button class="toggle-fact-btn" onclick="toggleFunFact()">Add/Remove Fun Fact</button>
+    <button onclick="toggleTheme()">Switch Theme</button>
+
+    <p id="funFact" class="fun-fact" style="display: none;">
+      I have a cat that loves baguette bread! 🐱🥖
+    </p>
+  </div>
+
+  <script>
+    function changeColor() {
+      const card = document.getElementById("profileCard");
+      const colors = ["#ffebee", "#e3f2fd", "#e8f5e9", "#fff3e0", "#f3e5f5"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      card.style.backgroundColor = randomColor;
+    }
+
+    function toggleFunFact() {
+      const fact = document.getElementById("funFact");
+      fact.style.display = (fact.style.display === "none") ? "block" : "none";
+    }
+
+    function toggleTheme() {
+      const card = document.getElementById("profileCard");
+      card.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
