@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <meta name="description" content="full stack" />
+    <title>Beauty face</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="shortcut icon"  href="logo.png">
+
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="navImg"><img src="logo.png" ></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+          
+        </ul>
+        <div class="order-btn">
+    <h1>Welcome To Beauty face</h1>
+    <button class="order-btn"><a href="#menu">cheak order</a></button>
+
+
+</div>
+
+    </header>
+   
+ </div>
+   
+</div>
+
+        <section id="about">
+    <div class="container">
+    <h1>About Beauty Face</h1>
+    <p>At Beauty Face, beauty is an art we create with passion. We specialize in offering the best original makeup products that give you a stunning look, reflecting your personality and enhancing your features with elegance. 
+        Our goal is to help you discover your unique beauty with confidence through our exclusive collection of cosmetics and skincare essentials.
+
+    <h2>Our History</h2>
+
+    <p id="part1">
+     At Beauty Face, we believe every face holds a unique beauty that deserves to shine. That’s why we provide expert guidance and professional tips to help you choose the perfect products that suit youwith guaranteed high quality and competitive prices
+
+    <p id="part2">
+    Join our world and always stay radiant with a look that truly represents you.
+    </p>
+    </p>
+
+    <button onclick="showMore()">Learn More</button>
+    
+  </div>
+        </section>
+        <section id="menu">
+  <div id="container">
+    <div id="title">
+      <h1> Our Special mack up</h1>
+      <input type="text" id="searchInput" placeholder="search mack up" oninput="filterMackup()">
+    </div>
+    <div id="menu-items">
+
+        </div>  
+      </div>
+    <button class="cheak-order-btn"><a href="#contact">cheak order</a></button>
+  </div>
+</section>
+
+             <section id="contact">
+                <div class="container">
+                  <div class="contact-content">
+                    <div class="contact-info">
+                        <div>
+                            <h3>ADDRESS</h3>
+                            <p><i class="fa-solid fa-location-dot"></i> Gamal Abd AL Nasser street, fayoum, Egypt</p>
+                            <p><i class="fa-solid fa-phone"></i> Hot line: 19588</p>
+                            <p><i class="fa-regular fa-envelope"></i> support@coffeecup.com</p>
+                        </div>
+                        <div>
+                            <h3>WORKING HOURS</h3>
+                            <p>8:00 am to 11:00 pm on Weekdays</p>
+                            <p>11:00 am to 1:00 Am on Weekends</p>
+                        </div>
+                        <section id="follow-us" style="text-align: center; margin: 40px 0;">
+                         <section id="follow-us">
+                        <h2>Follow Us</h2>
+                      <div class="social-icons">
+                     <a href="https://www.facebook.com/YourPage" target="_blank">
+                     <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                   </a>
+                    <a href="https://www.instagram.com/YourPage" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                   </a>
+                    <a href="https://www.twitter.com/YourPage" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                   </a>
+                 </div>
+            </section>
+                     <a href="https://buy.stripe.com/test_00waEY0lU84g85Fgu1e3e00" target="_blank">
+                         <button>Pay Now</button>
+                     </a>
+                    </div>
+                    <form>
+                        <input type="text" name="Name" id="name" placeholder="Full Name">
+                        <input type="email" name="email" id="email" placeholder="Email Address">
+                        <input type="text" name="subject" id="subject" placeholder="order name">
+                        <textarea name="message" id="message" cols="30" rows="5" placeholder="Notes"></textarea>
+                        <button onclick="validateForm()">order now</button>
+                    </form>
+                </div>
+            </div>
+            <footer>
+           &copy; 2025 Coffee Cup Cafe. All rights reserved.
+          </footer>
+        </section>
+       <script src="script.js"></script>
+</body>
